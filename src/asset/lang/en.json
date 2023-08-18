@@ -1,0 +1,29 @@
+{
+    "home": "ABOUT US",
+    "project": "PROJECT",
+    "contact": "CONTACT",
+
+    "about-title": "ABOUT",
+    "about-title-2": "US",
+    "about-description": "DekCom Club is a part of Mass Media Cooperation Group of Debsirin Nonthaburi School.",
+    "about-description-2": "To work in producing school videos and developing potential in computer skills and technology and communication.",
+
+    "department":"There are 5 departments in DekCom Club.",
+
+    "section-game-title": "Game Developer",
+    "section-game-description": "Learn about game design and how to create games by using Construct 3, RPG Maker or anything.",
+    "section-multimedia-title": "Multimedia",
+    "section-multimedia-description": "Learn about scriptwriting, video editing, and cinematography.",
+    "section-program-title": "Programmer",
+    "section-program-description": "Learn about Web Development or Application Development by using Visual Studio Code or related programs",
+    "section-graphic-title": "Graphic Design",
+    "section-graphic-description": "Learn about Digital Art, Designing, and Drawing.",
+    "section-robot-title": "Robot Engineer",
+    "section-robot-description": "Learn about how to make a robot and coding with C language by using Arduino or make a robot with Lego MindStorm",
+
+    
+
+
+    "project-title": "RECENT",
+    "project-title-2": "PROJECT"
+}
