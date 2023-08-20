@@ -23,7 +23,44 @@
 
     
 
+    "more-detail-title-A" : "More Detail",
+    "more-detail-title-B" : "Download Here",
+    "url-title-A" : "Watch Video",
+    "url-title-B" : "Click to Download",
+
+    "close": "Close",
+
+
 
     "project-title": "RECENT",
-    "project-title-2": "PROJECT"
+    "project-title-2": "PROJECT",
+    
+    "sennestia-title" : "PSYCHOLOGICAL HORROR GAME",
+    "sennestia-description" : "A psychological horror game about a little girl named Senneth. She accidentally discovered a magical book in her mansion and get transferred to another dimension. She has to find a way out while discovering the truth about her family and herself.",
+    "sennestia-status" : "STATUS :",
+    "sennestia-status-2" : "CHANGE TEAM",
+    "sennestia-demo-title" : "DEMO VERSION",
+    "sennestia-disk-required" : "Disk Space Required 400MB~",
+    "sennestia-full-title" : "FULL VERSION",
+    "sennestia-full-description" : "Because the development team has already graduated. Make the full version of the game not our team's development team. But with that team still developing the full version game If you want to follow the news or want to play the full version Can be tracked here",
+
+    "dekcom-keychains-2022-title": "JANUARY 2022",
+    "dekcom-keychains-2022-description": "DekCom Club 1st Merchandise: Christmas keychains will be available in January 2022.",
+
+    "food-waste-competittion-2021-name": "FOOD WASTE COMPETITION",
+    "food-waste-competittion-2021-title": "2021",
+    "food-waste-competittion-2021-description": "Short film competition about Food Waste in 2021.",
+
+    "dream-traveler-title": "ARCADE | ANDROID",
+    "dream-traveler-description": "DreamTraveler is an arcade game developed by DekCom Club for Debsirin Nonthaburi School open house in 2019.",
+    
+    "dream-traveler-2-title": "ARCADE | ANDROID",
+    "dream-traveler-2-description": "DreamTraveler 2 is an arcade game developed by DekCom Club for Debsirin Nonthaburi School open house in 2020.",
+
+
+
+
+
+    "contact-title" : "CONTACT",
+    "contact-title-2" : "US"
 }

@@ -8,6 +8,15 @@
 # testing
 /coverage
 
+
+# Game 
+
+public/Sennethia-Demo-Linux32.zip
+public/Sennethia-Demo-Linux64.zip
+public/Sennethia-Demo-Mac64.zip
+public/Sennethia-Demo-Win32.zip
+public/Sennethia-Demo-Win64.zip
+
 # production
 /build
 

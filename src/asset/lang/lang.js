@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import en from './en.json'
 import th from './th.json'
+
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
@@ -10,6 +11,8 @@ export function LanguageProvider({ children }) {
     setCurrentLanguage(language);
   };
 
+  console.log(currentLanguage)
+  
   const languageMap = {
     en: {
       translation: en,
@@ -18,7 +21,7 @@ export function LanguageProvider({ children }) {
     th: {
       translation: th,
       font: 'font-kanit',
-    },
+    }
   };
 
   const getTranslation = (key) => {

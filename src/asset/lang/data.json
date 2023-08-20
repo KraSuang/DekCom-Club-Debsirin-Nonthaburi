@@ -1,0 +1,66 @@
+{
+    "home": "",
+    "project": "",
+    "contact": "",
+
+    "about-title": "",
+    "about-title-2": "",
+    "about-description": "",
+    "about-description-2": "",
+
+    "department":"",
+
+    "section-game-title": "",
+    "section-game-description": "",
+    "section-multimedia-title": "",
+    "section-multimedia-description": "",
+    "section-program-title": "",
+    "section-program-description": "",
+    "section-graphic-title": "",
+    "section-graphic-description": "",
+    "section-robot-title": "",
+    "section-robot-description": "",
+
+
+
+    "more-detail-title-A" : "",
+    "more-detail-title-B" : "",
+    "url-title-A" : "",
+    "url-title-B" : "",
+    "close": "",
+
+
+
+
+    "project-title": "", 
+    "project-title-2": "",
+    
+    "sennestia-title" : "",
+    "sennestia-description" : "",
+    "sennestia-status" : "",
+    "sennestia-status-2" : "",
+    "sennestia-demo-title" : "",
+    "sennestia-disk-required" : "",
+    "sennestia-full-title" : "",
+    "sennestia-full-description" : "",
+
+    "dekcom-keychains-2022-title": "",
+    "dekcom-keychains-2022-description": "",
+
+    "food-waste-competittion-2021-name": "",
+    "food-waste-competittion-2021-title": "",
+    "food-waste-competittion-2021-description": "",
+    
+    "dream-traveler-title": "",
+    "dream-traveler-description": "",
+    
+    "dream-traveler-2-title": "",
+    "dream-traveler-2-description": "",
+
+
+
+
+
+    "contact-title" : "",
+    "contact-title-2" : ""
+}

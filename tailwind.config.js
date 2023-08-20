@@ -25,6 +25,7 @@ module.exports = {
         'program': "url('./asset/image/program.png')",
         'graphic': "url('./asset/image/Graphic.jpg')",
         'robot': "url('./asset/image/Robot.jpg')",
+        'thumbnail': "url('./asset/image/Club_Banner.png')",
       }
     },
   },

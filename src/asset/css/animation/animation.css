@@ -1,0 +1,87 @@
+.typing-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+#blinking-box {
+  position: absolute;
+  width: 60px; /* Adjust the width of the box */
+  height: 100%; /* Adjust the height of the box */
+  background-color: white; /* Set the background color of the box */
+  animation: blink 0.5s steps(1) infinite;
+  margin-left: 5px; /* Adjust the spacing between the box and the text */
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+@keyframes bg-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.animate-fade-in {
+    animation: bg-fade-in 2s ease-in-out;
+}
+
+/* Define a keyframes animation for the fade-in effect */
+@keyframes visit-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+  }
+}
+
+/* Apply the opacity transition and keyframes animation to the button */
+.visit-fade-in {
+  opacity: 0;
+  position: relative;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition:  all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.visit-fade-in::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition:  all 0.2s ease-in-out;
+}
+.visit-fade-in:hover:before{
+  transform: translateX(0);
+  z-index: -1;
+}
+.visit-fade-in:hover{
+  transform: scale(1.05);
+  color: #991b1b;
+}
+
+.animate-visit-fade-in {
+  animation: visit-fadeIn 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+}
+
+
+
+  
