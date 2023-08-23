@@ -71,10 +71,10 @@ const About = ({ isNavbarAppear, AboutChange }) => {
     return (
         <>
             <div
-                className={`flex flex-col w-full h-fit mt-[90px] items-center
-                    max-[440px]:mx-2 
+                className={`flex flex-col w-full h-fit items-center
+                    max-[440px]:mx-2 max-[440px]:mt-[60px]
                     lg:mx-14 
-                    xl:mx-20 
+                    xl:mx-20 xl:mt-[90px]
                     ${getCurrentFont(currentLanguage)}`}
             >
                 <div
@@ -131,7 +131,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
 
                 <motion.p
                     className={`text-white w-full text-center flex justify-center items-center 
-                        max-[440px]:text-2xl max-[440px]:h-[100px]
+                        max-[440px]:text-base max-[440px]:h-[100px]
                         lg:text-[30px] lg:h-[150px]
                         xl:text-[40px] xl:h-[200px] 
                         ${isActive('en') ? 'font-medium' : 'font-regular'}`}
@@ -141,7 +141,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                     variants={AnimationVariants}
                 >{getTranslation("department")}</motion.p>
 
-                <div className="flex my-9 w-full justify-center">
+                <div className="flex max-[440px]:my-0 xl:my-9 w-full justify-center">
                     <motion.div
                         className="grid gap-6 
                             max-[440px]:grid-cols-2 
