@@ -15,7 +15,7 @@ const NavBar = ({ navbarisAppear, PageChange }) => {
     const navigate = useNavigate();
 
     console.log("Current location:", location);
-
+    
     const handleLanguageChange = (language) => {
         setLanguage(language);
     };
