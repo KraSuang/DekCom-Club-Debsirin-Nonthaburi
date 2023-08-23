@@ -1,6 +1,7 @@
 import { useLanguage } from "../../asset/lang/lang"
 import ProjectPreview from "../../components/ProjectPreview";
 import React, { useState } from "react"
+import { motion } from "framer-motion"
 
 
 
@@ -16,11 +17,69 @@ import Sennestia from "../../components/Moral/Sennestia";
  
 
 
-function Project(){
+const Project = ({ isNavbarAppear, ProjectChange }) => {
 
     const { currentLanguage, getTranslation, getCurrentFont } = useLanguage();
 
     const [isSennestiaOpen, setIsSennestiaOpen] = useState(false);
+
+    const AnimationVariants = {
+        hidden: { 
+            opacity: 0,
+            y: 20,
+            transition: {
+                duration: 0.4
+            }
+         },
+        Ivisible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                delay: isNavbarAppear ? 0.0 : 1.7,
+            },
+        },
+        IIvisible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                delay: isNavbarAppear ? 0.1 : 1.8,
+            },
+        },
+        IIIvisible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                delay: isNavbarAppear ? 0.3 : 2.1,
+            },
+        },
+        IVvisible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                delay: isNavbarAppear ? 0.3 : 2.0,
+            },
+        },
+        Vvisible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                delay: isNavbarAppear ? 0.4 : 2.1,
+            },
+        },
+        VIvisible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                delay: isNavbarAppear ? 0.5 : 2.2,
+            },
+        },
+    };
 
     function openSennestiaModal() {
         setIsSennestiaOpen(true);
@@ -28,13 +87,49 @@ function Project(){
       
     return(
         <>
-            <div className={`flex flex-col w-full h-fit mx-20 mt-[90px] items-center ${getCurrentFont(currentLanguage)}`}> 
-               <div className="flex w-full h-[200px] justify-center items-center">
-                    <p className={`text-white font-extralight text-[60px]`}>{getTranslation("project-title")}</p>
-                    <p className={`ml-3 text-red-800 font-extralight text-[60px]`}>{getTranslation("project-title-2")}</p>
+            <div className={`flex flex-col w-full h-fit mt-[90px] items-center 
+                max-[440px]:mx-6
+                xl:mx-20 
+                ${getCurrentFont(currentLanguage)}`}> 
+               <div className="flex w-full justify-center items-center
+                    max-[440px]:h-[100px]
+                    lg:h-[150px]
+                    xl:h-[200px]">
+                    <motion.p 
+                        className={`text-white font-extralight 
+                            max-[440px]:text-[30px] 
+                            lg:text-[48px]
+                            xl:text-[60px]`}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={ProjectChange ? 'hidden' : 'Ivisible'}
+                        exit="hidden"
+                        variants={AnimationVariants}
+                    >{getTranslation("project-title")}</motion.p>
+
+                    <motion.p 
+                        className={`ml-3 text-red-800 font-extralight 
+                            max-[440px]:text-[30px] 
+                            lg:text-[48px]
+                            xl:text-[60px]`}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={ProjectChange ? 'hidden' : 'IIvisible'}
+                        exit="hidden"
+                        variants={AnimationVariants}
+                    >{getTranslation("project-title-2")}</motion.p>
+
                 </div>
-                <div className="flex  w-full justify-center mb-20">
-                    <div className="grid grid-cols-2 gap-10">
+                <motion.div 
+                    className="flex  w-full justify-center mb-20"
+                    initial={{ opacity: 0, y: -20 }}
+                        animate={ProjectChange ? 'hidden' : 'IIIvisible'}
+                        exit="hidden"
+                        variants={AnimationVariants}
+                    >
+                    <div className="grid gap-10 
+                        max-[440px]:grid-cols-1
+                        lg:grid-cols-2
+                        xl:grid-cols-2
+                    ">
                         <ProjectPreview 
                             image={sennestia_pic} 
                             image_align={"center"}
@@ -101,7 +196,7 @@ function Project(){
                             more_detail_visible={'hidden'}
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
 
 

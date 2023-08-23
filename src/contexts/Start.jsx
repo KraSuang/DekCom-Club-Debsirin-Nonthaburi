@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../asset/css/animation/animation.css';
 
-
-
 function Start() {
-    const [buttonVisible, setButtonVisible] = useState(false);
+    const [buttonVisible, setButtonVisible] = useState(false)
+    const [prepareFadeOut, setPrepareFadeOut] = useState(false)
+    const [fadeOut, setFadeOut] = useState(false);
+    const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
     useEffect(() => {
         const textElement = document.getElementById("typing-text");
@@ -37,22 +37,36 @@ function Start() {
 
     }, []);
 
+    const handleButtonClick = () => {
+        setFadeOut(true);
+
+        setTimeout(() => {
+            setPrepareFadeOut(true)
+        }, 500);
+        setTimeout(() => {
+            navigate("/home");
+        }, 1000);
+    };
+
     return (
         <>
-            <div className='flex flex-col relative w-full h-screen justify-center items-center bg-thumbnail bg-cover bg-center animate-fade-in overflow-hidden'>
-                <div className="flex flex-col w-full h-full relative justify-center items-center z-10">
-                    <div className="typing-container">
-                        <p id="typing-text" className="font-oswald text-[100px] text-white"></p>
-                        <span id="blinking-box" className="animate-blink"></span>
+            <div className={`flex flex-col relative w-full h-screen justify-center items-center max-[440px]:bg-thumbnail2 sm:bg-thumbnail bg-cover bg-center animate-fade-in overflow-hidden ${prepareFadeOut ? 'transition-all duration-[0.4s] opacity-40' : ''}`}>
+                <div className={`flex flex-col w-full h-full relative justify-center items-center z-10 ${fadeOut ? 'transition-all duration-500 opacity-0' : ''}`}>
+                    <div className={`typing-container`}>
+                        <p id="typing-text" className={`font-oswald max-[440px]:text-[50px] md:text-[65px] lg:text-[85px] xl:text-[100px] text-white`}></p>
+                        <span id="blinking-box" className={`animate-blink`}></span>
                     </div>
-                    <div className='flex w-fit h-[80px] relative items-center justify-center'>
-                        <Link
-                            to="/home"
-                            className={`font-oswald text-3xl rounded-2xl bg-red-800 visit-fade-in cursor-default mt-6 px-5 py-3 text-white ${buttonVisible ? 'animate-visit-fade-in' : ''}`}>
-                            <span>Visit the website</span>
-                        </Link>
+                    <div className={`flex w-fit h-[80px] relative items-center justify-center mb-auto ${fadeOut ? '' : ''}`}>
+                        {buttonVisible ? (
+                            <button
+                                onClick={handleButtonClick}
+                                className={`font-oswald max-[440px]:text-lg lg:text-2xl xl:text-3xl rounded-2xl bg-red-800 visit-fade-in cursor-pointer mt-6 px-5 py-3 text-white ${buttonVisible ? 'animate-visit-fade-in' : ''}`}>
+                                <span>Visit the website</span>
+                            </button>
+                        ) : null}
                     </div>
                 </div>
+                <p className={`absolute text-white/50 font-oswald font-light bottom-3 opacity-100 ${fadeOut ? 'opacity-0' : ''}`}>© Copyright 2023 DekCom Club</p>
             </div>
         </>
     );
