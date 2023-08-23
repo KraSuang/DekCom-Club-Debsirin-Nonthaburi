@@ -107,7 +107,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                 </div>
                 <motion.p
                     className={`text-white text-center whitespace-wrap
-                        max-[440px]:w-[350px] max-[440px]:text-base
+                        max-[440px]:w-[350px] max-[440px]:text-sm
                         lg:w-[800px] lg:text-lg
                         xl:w-[1000px] xl:text-2xl 
                         ${isActive('en') ? 'font-medium' : 'font-regular'}`}
@@ -119,7 +119,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
 
                 <motion.p
                     className={`text-white text-center whitespace-wrap
-                        max-[440px]:w-[350px] max-[440px]:text-base
+                        max-[440px]:w-[350px] max-[440px]:text-sm
                         lg:w-[800px] lg:text-lg
                         xl:w-[1200px] xl:text-2xl 
                         ${isActive('en') ? 'font-medium' : 'font-regular'}`}
