@@ -1,7 +1,10 @@
 {
   "name": "dekcom-react",
-  "version": "0.1.0",
+  "version": "1.0.1",
+  "status": "Developer Beta",
   "private": true,
+  "lastestUpdated": "2023-08-25",
+  "lastUpdateTime": "09:35:51",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.5",
@@ -9,7 +12,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
+    "date-fns-tz": "^2.0.0",
     "framer-motion": "^10.16.0",
+    "fs": "^0.0.1-security",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
@@ -22,7 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "nodemon updatePackage.js"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +48,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "lastUpdated": "2023-08-25T02:35:51.770Z"
 }

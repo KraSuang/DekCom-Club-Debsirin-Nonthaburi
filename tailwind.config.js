@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'full': '1752px'
+      },
       colors: {
         background: {
             home: {

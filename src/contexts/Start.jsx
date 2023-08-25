@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../asset/css/animation/animation.css';
+import packageJson from '../../package.json'
 
 function Start() {
     const [buttonVisible, setButtonVisible] = useState(false)
@@ -66,6 +67,7 @@ function Start() {
                         ) : null}
                     </div>
                 </div>
+                <p className={`absolute text-white/50 font-oswald font-light bottom-9 opacity-100 ${fadeOut ? 'opacity-0' : ''}`}>Lastest Update : {packageJson.lastestUpdated} Time : {packageJson.lastUpdateTime} Version : {packageJson.version} {packageJson.status}</p>
                 <p className={`absolute text-white/50 font-oswald font-light bottom-3 opacity-100 ${fadeOut ? 'opacity-0' : ''}`}>© Copyright 2023 DekCom Club</p>
             </div>
         </>
