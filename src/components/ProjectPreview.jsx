@@ -9,35 +9,34 @@ const ProjectPreview = ({ image, image_align, name, visible_a, visible_b, title,
     return (
         <>
             <div className={`max-[440px]:hidden flex bg-background-preview/60 items-center content-center rounded-2xl transition-all duration-300 group hover:bg-background-preview/100 group hover:scale-[1.03]
-                lg:w-[550px] lg:h-[220px]
-                xl:w-[700px] xl:h-[280px] 
+                lg:w-[700px] lg:h-[280px]
                 ${getCurrentFont(currentLanguage)}`}
             >
                 <img
                     src={image}
                     class={`object-cover object-${image_align} transition-transform duration-300 group-hover:scale-[1.03] rounded-2xl
-                    lg:w-[240px] lg:h-[240px]
-                    xl:w-[300px] xl:h-[300px]
+                    lg:w-[300px] lg:h-[300px]
                 `}
                     loading="lazy"
                     alt="thumbnail" />
                 <div className="flex flex-col px-6 py-4 w-full h-full justify-center ">
                     <p className={`text-white ${visible_a} font-oswald font-semibold 
                     lg:text-[20px]
-                    xl:text-[26px]`}
+                    2xl:text-[26px]`}
                     >{name}</p>
 
                     <p className={`text-white ${visible_b} font-semibold 
                     lg:text-[20px]
-                    xl:text-[26px]`}
+                    2xl:text-[26px]`}
                     >{name}</p>
 
                     <p className="text-white font-medium 
-                    lg:text-xs
-                    xl:text-base"
+                    lg:max-text-xs
+                    xl:text-sm
+                    2xl:text-base"
                     >{title}</p>
 
-                    <p className={`text-white h-full ease-in-out my-4 ${isActive('en') ? 'max-[440px]:text-xs lg:text-sm xl:text-base font-medium' : 'text-sm font-regular'}`}>{description}</p>
+                    <p className={`text-white h-full ease-in-out max-my-4 ${isActive('en') ? 'max-[440px]:max-text-xs lg:max-text-sm xl:max-text-base font-medium' : 'max-text-sm font-regular'}`}>{description}</p>
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
                             <p className={`text-white ${isActive('en') ? 'lg:text-sm xl:text-lg font-medium' : 'text-base font-regular'}`}>{status}</p>
@@ -47,7 +46,7 @@ const ProjectPreview = ({ image, image_align, name, visible_a, visible_b, title,
                         <button 
                             className={`${more_detail_visible} text-red-600 transition-all duration-300 cursor-pointer hover:text-white hover:scale-105
                                 lg:text-[16px]
-                                xl:text-[20px]`} 
+                               2xl:text-[20px]`} 
                             onClick={onClick}>
                                 {more_detail_title}
                         </button>

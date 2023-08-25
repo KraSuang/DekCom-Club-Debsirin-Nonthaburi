@@ -73,7 +73,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
             <div
                 className={`flex flex-col w-full h-fit items-center
                     max-[440px]:mx-2 max-[440px]:mt-[60px]
-                    lg:mx-14 
+                    lg:mx-14 lg:mt-[50px]
                     xl:mx-20 xl:mt-[90px]
                     ${getCurrentFont(currentLanguage)}`}
             >
@@ -81,13 +81,14 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                     className="flex w-full justify-center items-center
                         max-[440px]:h-[100px] 
                         lg:h-[150px]
-                        xl:h-[200px]"
+                        2xl:h-[175px]
+                        full:h-[200px]"
                 >
                     <motion.p
                         className={`text-white font-extralight 
                             max-[440px]:text-[30px] 
                             lg:text-[48px]
-                            xl:text-[60px]`}
+                            xl:max-text-[60px]`}
                         initial={{ opacity: 0, y: -20 }}
                         animate={AboutChange ? 'hidden' : 'Ivisible'}
                         exit="hidden"
@@ -98,7 +99,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                         className={`ml-3 text-red-800 font-extralight 
                             max-[440px]:text-[30px] 
                             lg:text-[48px]
-                            xl:text-[60px]`}
+                            xl:max-text-[60px]`}
                         initial={{ opacity: 0, y: -20 }}
                         animate={AboutChange ? 'hidden' : 'IIvisible'}
                         exit="hidden"
@@ -109,7 +110,8 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                     className={`text-white text-center whitespace-wrap
                         max-[440px]:w-[350px] max-[440px]:text-sm
                         lg:w-[800px] lg:text-lg
-                        xl:w-[1000px] xl:text-2xl 
+                        xl:text-xl
+                        full:w-[1000px] full:text-2xl 
                         ${isActive('en') ? 'font-medium' : 'font-regular'}`}
                     initial={{ opacity: 0, y: -20 }}
                     animate={AboutChange ? 'hidden' : 'IIIvisible'}
@@ -121,7 +123,8 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                     className={`text-white text-center whitespace-wrap
                         max-[440px]:w-[350px] max-[440px]:text-sm
                         lg:w-[800px] lg:text-lg
-                        xl:w-[1200px] xl:text-2xl 
+                        xl:text-xl
+                        full:w-[1200px] full:text-2xl 
                         ${isActive('en') ? 'font-medium' : 'font-regular'}`}
                     initial={{ opacity: 0, y: -20 }}
                     animate={AboutChange ? 'hidden' : 'IVvisible'}
@@ -133,7 +136,7 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                     className={`text-white w-full text-center flex justify-center items-center 
                         max-[440px]:text-base max-[440px]:h-[100px]
                         lg:text-[30px] lg:h-[150px]
-                        xl:text-[40px] xl:h-[200px] 
+                        full:text-[40px] full:h-[200px] 
                         ${isActive('en') ? 'font-medium' : 'font-regular'}`}
                     initial={{ opacity: 0, y: -20 }}
                     animate={AboutChange ? 'hidden' : 'Vvisible'}
@@ -144,9 +147,10 @@ const About = ({ isNavbarAppear, AboutChange }) => {
                 <div className="flex max-[440px]:my-0 xl:my-9 w-full justify-center">
                     <motion.div
                         className="grid gap-6 
-                            max-[440px]:grid-cols-2 
-                            lg:grid-cols-5 lg:mb-20
-                            xl:grid-cols-5 xl:mb-0"
+                            max-[440px]:grid-cols-2
+                            lg:grid-cols-3 lg:mb-10
+                            xl:grid-cols-4 xl:mb-10
+                            2xl:grid-cols-5 2xl:mb-20"
                         initial={{ opacity: 0, y: -20 }}
                         animate={AboutChange ? 'hidden' : 'VIvisible'}
                         exit="hidden"
